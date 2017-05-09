@@ -1,137 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a09848f-8929-4461-a845-4d400055dda2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gift-card.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/gift-card.scss.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/ico-select.svg.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/match-media.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/password.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/theme.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/theme.scss.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/vendor.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/settings_data.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/settings_schema.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/gift_card.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/password.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/layout/theme.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/locales/de.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/locales/en.default.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/locales/es.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/locales/fr.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/locales/pt-BR.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/locales/pt-PT.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/article-template.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/blog-template.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/cart-template.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/collection-list.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/collection-template.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/collection.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/custom-content.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/feature-columns.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/feature-row.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/featured-blog.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/featured-product.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/footer.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/header.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/hero.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/image-bar.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/list-collections-template.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/logo-bar.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/map.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/newsletter.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/password-content.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/password-footer.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/password-header.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/product-template.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/quotes.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/sections/slideshow.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/collection-grid-item.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/comment.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/google-fonts.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-amazon_payments.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-american_express.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-apple_pay.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-arrow-left.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-arrow-right.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-bitcoin.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-cart.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-chevron-down.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-chevron-left.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-chevron-right.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-chevron-up.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-cirrus.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-close.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-dankort.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-diners_club.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-discover.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-dogecoin.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-dwolla.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-facebook.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-forbrugsforeningen.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-hamburger.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-instagram.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-interac.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-jcb.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-laser.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-litecoin.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-lock.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-login.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-maestro.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-master.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-minus.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-pause.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-paypal.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-pinterest.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-play-video.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-play.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-plus.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-quote.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-rss.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-search.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-shopify-logo.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-snapchat.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-stripe.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-tumblr.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-twitter.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-vimeo.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-visa.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/icon-youtube.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/no-blocks.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/pagination.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/product-card-grid.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/product-card-list.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/product-price.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/search-form.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/site-nav.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/social-meta-tags.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/social-sharing.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/subscription-cart-footer.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/subscription-product.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/snippets/subscription-theme-footer.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/404.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/article.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/blog.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/cart.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/collection.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/customers/account.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/customers/activate_account.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/customers/addresses.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/customers/login.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/customers/order.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/customers/register.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/customers/reset_password.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/gift_card.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/index.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/list-collections.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/page.contact.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/page.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/password.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/product.liquid" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/templates/search.liquid" afterPath="" />
-    </list>
+    <list default="true" id="1a09848f-8929-4461-a845-4d400055dda2" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -390,12 +260,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1494317560021</updated>
-      <workItem from="1494317561348" duration="1009000" />
+      <workItem from="1494317561348" duration="1109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1009000" />
+    <option name="totallyTimeSpent" value="1109000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-177" width="1920" height="1177" extended-state="6" />
