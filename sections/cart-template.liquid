@@ -131,6 +131,22 @@
               </div>
             {% endif %}
             <div class="cart__shipping">{{ 'cart.general.shipping_at_checkout' | t }}</div>
+            	<!-- calculate the amount to round up, eg $3.46 -> $0.46 -> $0.54 -->
+          		{% assign total_price_dollars_only = cart.total_price | divided_by: 100 | round | times: 100 %}
+          		{% assign total_price_cents_only = cart.total_price | minus: total_price_dollars_only %}
+          		{% assign amount_to_round_up = 100 | minus: total_price_cents_only  %}
+
+				<!-- find the matching variant id in the "roundup" product -->
+          		{% for roundup_variant in all_products['round-up'].variants %}
+            		{% if roundup_variant.price == amount_to_round_up %}
+               			{% assign roundup_variant_to_use = roundup_variant %}
+               			{% break %}
+            		{% endif %}
+          		{% endfor %}
+            <!-- add a link that adds that specific roundup product -->
+          	{% if roundup_variant_to_use %}
+          		<a href="/cart/add?id={{ roundup_variant_to_use.id }}" class="btn btn--secondary cart__update cart__continue--large small--hide">Round up</a>
+          	{% endif %}
             <a href="collections/all" class="btn btn--secondary cart__update cart__continue--large small--hide" >{{ 'cart.general.continue_shopping' | t }}</a>
             <input type="submit" name="update" class="btn btn--secondary cart__update cart__update--large small--hide" value="{{ 'cart.general.update' | t }}">
             <input type="submit" name="checkout" class="btn btn--small-wide" value="{{ 'cart.general.checkout' | t }}">
