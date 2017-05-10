@@ -37,6 +37,64 @@
           delay: 300,   
         });
 
+
+        // PRICE FETCH METHODS 
+
+         // Ajax request to nano-app to fetch price and create variants with new prices accordingly
+         $(document).on('keyup', '[data-variant-price-id]', function(e) {
+           delay(function(){
+            $.ajax({
+              url: 'https://89c944b6.ngrok.io/get-variant.json',
+              data: { 'amount': e.target.value, 'shop': 'nanowrimo-store.myshopify.com' },
+              success: function(data) {
+                $('#price').data('variant-price-id', data.variant_id)
+              }
+            });
+           }, 300)
+         });
+
+        // Allow delay when typing price
+        var delay = (function(){
+          var timer = 0;
+          return function(callback, ms){
+          clearTimeout (timer);
+          timer = setTimeout(callback, ms);
+         };
+        })();
+
+        // SUBMIT BUTTON OVERRIDE 
+
+        var recurringCharge = (function(){
+          if ($('#recurring-charge').is(":checked")){
+            $('#recurring-charge').val()
+          };
+        })
+
+        var donnorGoodies = (function(){
+          if ($('#donnor-goodies').is(":checked")){
+            $('#donnor-goodies').val()
+          };
+        })
+
+         $( "form" ).submit(function(e) {
+            e.preventDefault();
+            $.post('/cart/add.js', {
+                quantity: 1,
+                id: $('#price').data('variant-price-id'),
+                price: $('#price').val(),
+                properties: {
+                    'donor-goodies': donnorGoodies(),
+                    'event-type': $('#event-type').val(),
+                    'username': $('#username').val(),
+                    'url': $('#url').val(),
+                    'recurring-charge': recurringCharge()
+                  },
+                function(data) {
+                  window.location.reload();
+                }
+            });
+         });
+
       }(jQuery));
 
   // Override default values of shop.strings for each template.

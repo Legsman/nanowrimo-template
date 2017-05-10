@@ -125,34 +125,34 @@
 
             <div class="product-form__item">
               <label for="price">Price you'd like to pay</label>
-              <input required class="required" id="price" type="number" value="{{ product.price }}"" class="product-form__input" min="2" name="donor_attributes[price]" data-check-price="{{ product.price }}""
+              <input required class="required" id="price" type="number" value="" class="product-form__input" min="2" name="properties[price]" data-variant-price-id="">
 
               <br/>
 
               <label for="donor-goodies">
-                  <input type="hidden" name="donor_attributes[accept-donnor_goodies]" value="No">
-                  <input id="donor-goodies" type="checkbox" name="donor_attributes[accept-donnor_goodies]" value="Yes">
+                  <input type="hidden" name="properties[accept-donnor_goodies]" value="No">
+                  <input id="donor-goodies" type="checkbox" name="properties[accept-donnor_goodies]" value="Yes">
                   Would you like to receive free donor goodies ? (Optional)
               </label>
 
               <label>Which site you'd like to donate to</label>
-              <select id="event-type" name="donor_attributes[event-type]">
+              <select id="event-type" name="properties[event-type]">
                 <option value="nanowrimo">NaNoWriMo</option>
                 <option value="camp-nanowrimo">Camp NaNoWriMo</option>
               </select>
 
               <div class="ui-widget">
                 <label for="username">Choose a NaNoWriMo username</label>
-                <input id="uid" type="hidden" name="donor_attributes[uid]">
-                <input id="username" type="text" class="product-form__input" name="donor_attributes[username]" data-check-username="">
+                <input id="uid" type="hidden" name="properties[uid]">
+                <input id="username" type="text" class="product-form__input" name="properties[username]" data-check-username="">
               </div>
 
               <label for="url">URL to display with your username on NaNoWriMo website (Optional)</label>
-              <input id="url" type="text" class="product-form__input" name="donor_attributes[url]">
+              <input id="url" type="text" class="product-form__input" name="properties[url]">
 
               <label for="recurring-charge">
-                  <input type="hidden" name="donor_attributes[accept-donnor_goodies]" class="product-form__input" value="No">
-                  <input id="donor-goodies" type="checkbox" name="donor_attributes[recurring-charge]" value="Yes">
+                  <input type="hidden" name="properties[recurring-charge]" class="product-form__input" value="No">
+                  <input id="recurring-charge" type="checkbox" name="properties[recurring-charge]" value="Yes">
                   Make this order recurrent (Optional)
               </label>
 
