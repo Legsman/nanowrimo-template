@@ -145,12 +145,38 @@
               {% endfor %}
             </select>
 
-            {% if section.settings.show_quantity_selector %}
-              <div class="product-form__item product-form__item--quantity">
-                <label for="Quantity">{{ 'products.product.quantity' | t }}</label>
-                <input type="number" id="Quantity" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
+            <div class="product-form__item">
+              <label for="price">Price you'd like to pay</label>
+              <input required class="required" id="price" type="number" value="{{ product.price }}"" class="product-form__input" min="2" name="donor_attributes[price]" data-check-price="{{ product.price }}""
+
+              <br/>
+
+              <label for="donor-goodies">
+                  <input type="hidden" name="donor_attributes[accept-donnor_goodies]" value="No">
+                  <input id="donor-goodies" type="checkbox" name="donor_attributes[accept-donnor_goodies]" value="Yes">
+                  Would you like to receive free donor goodies ? (Optional)
+              </label>
+
+              <label>Which site you'd like to donate to</label>
+              <select id="event-type" name="donor_attributes[event-type]">
+                <option value="nanowrimo">NaNoWriMo</option>
+                <option value="camp-nanowrimo">Camp NaNoWriMo</option>
+              </select>
+
+              <div class="ui-widget">
+                <label for="username">Choose a NaNoWriMo username</label>
+                <input id="uid" type="hidden" name="donor_attributes[uid]">
+                <input id="username" type="text" class="product-form__input" name="donor_attributes[username]" data-check-username="">
               </div>
-            {% endif %}
+
+              <label for="url">URL to display with your username on NaNoWriMo website (Optional)</label>
+              <input id="url" type="text" class="product-form__input" name="donor_attributes[url]">
+
+              <label for="recurring-charge">
+                  <input type="hidden" name="donor_attributes[accept-donnor_goodies]" class="product-form__input" value="No">
+                  <input id="donor-goodies" type="checkbox" name="donor_attributes[recurring-charge]" value="Yes">
+                  Make this order recurrent (Optional)
+              </label>
 
             <div class="product-form__item product-form__item--submit">
               <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if product.options.size == 1 and product.variants[0].title == 'Default Title' %} product-form__cart-submit--small{% endif %}">

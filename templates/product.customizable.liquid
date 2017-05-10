@@ -5,6 +5,40 @@
 {% section 'product-customizable-template' %}
 
 <script>
+      (function($) {
+
+        // USERNAMES AUTOCOMPLETE METHODS
+
+        // Build an array of the fetched usernames
+        function usernamesToArray(usernames) {
+         array = $.map(usernames, function(v,i){
+            return { label: v.name, value: v.name, id: v.uid };
+          });
+         return array
+        };
+
+        // Autocomplete method which fetch username from NanoWrimo api through nano-app
+        $("#username").autocomplete({
+           source: function (request, response) {
+              $.ajax({
+                 url: "/api/v1/users.json",
+                 dataType: "json",
+                 data: { 'username': request.term },
+                 success: function (data) {
+                    response(usernamesToArray(data.usernames));
+                 }
+              });
+           },
+          select: function (event, ui) {
+             $('#username').val = ui.item.value;
+             $('#uid').val = ui.item.id;
+          },
+          minLength: 2,   
+          delay: 300,   
+        });
+
+      }(jQuery));
+
   // Override default values of shop.strings for each template.
   // Alternate product templates can change values of
   // add to cart button, sold out, and unavailable states here.
