@@ -87,34 +87,12 @@
           <p itemprop="brand" class="product-single__vendor">{{ product.vendor }}</p>
         {% endif %}
 
+        <br />
+
         <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
           <meta itemprop="priceCurrency" content="{{ shop.currency }}">
 
           <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
-
-          <p class="product-single__price product-single__price-{{ section.id }}{% unless current_variant.available %} product-price--sold-out{% endunless %}">
-            {% if current_variant.compare_at_price > current_variant.price %}
-                <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-                <s id="ComparePrice-{{ section.id }}">{{ current_variant.compare_at_price | money }}</s>
-                <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
-                  <span id="ProductPrice-{{ section.id }}"
-                    itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
-                    {{ current_variant.price | money }}
-                  </span>
-                  <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}</span>
-                </span>
-            {% else %}
-              <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
-              <s id="ComparePrice-{{ section.id }}" class="hide">{{ current_variant.compare_at_price | money }}</s>
-              <span class="product-price__price product-price__price-{{ section.id }}">
-                <span id="ProductPrice-{{ section.id }}"
-                  itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
-                  {{ current_variant.price | money }}
-                </span>
-                <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}</span>
-              </span>
-            {% endif %}
-          </p>
 
           <form action="/cart/add" data-productid="{{product.id}}"  method="post" enctype="multipart/form-data" class="product-form product-form-{{ section.id }}{% unless section.settings.show_variant_labels %} product-form--hide-variant-labels{% endunless %}" data-section="{{ section.id }}"> 
  {% if product.available %}{% include 'subscription-product' %}{% endif %} 
