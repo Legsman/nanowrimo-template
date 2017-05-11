@@ -82,6 +82,56 @@
         </tbody>
       </table>
 
+      <div id="donation"></div>
+
+      <div id="donation-form" class="white-popup white-popup-block mfp-hide">
+        <form>
+          <h1>Add a donation to your cart</h1>
+          <fieldset style="border:0;">
+            <ol>
+              <li>
+                <label for="price">Price you'd like to pay</label>
+                <input required class="required" id="price" type="number" value="" class="product-form__input" min="2" name="properties[price]" data-variant-price-id="">
+              </li>
+              <li>
+                <label for="donor-goodies">
+                  <input type="hidden" name="properties[accept-donnor_goodies]" value="No">
+                  <input id="donor-goodies" type="checkbox" name="properties[accept-donnor_goodies]" value="Yes">
+                  Would you like to receive free donor goodies ? (Optional)
+                </label>
+              </li>
+             <li>
+                <label>Which site you'd like to donate to</label>
+                <select id="event-type" name="properties[event-type]">
+                  <option value="nanowrimo">NaNoWriMo</option>
+                  <option value="camp-nanowrimo">Camp NaNoWriMo</option>
+                </select>
+              </li>
+             <li>
+                <div class="ui-widget">
+                  <label for="username">Choose a NaNoWriMo username</label>
+                  <input id="uid" type="hidden" name="properties[uid]">
+                  <input id="username" type="text" class="product-form__input" name="properties[username]" data-check-username="">
+                </div>
+              </li>
+              <li>
+                <label for="url">URL to display with your username on NaNoWriMo website (Optional)</label>
+                <input id="url" type="text" class="product-form__input" name="properties[url]">
+              </li>
+              <li>
+                <label for="recurring-charge">
+                    <input type="hidden" name="properties[recurring-charge]" class="product-form__input" value="No">
+                    <input id="recurring-charge" type="checkbox" name="properties[recurring-charge]" value="Yes">
+                    Make this order recurrent (Optional)
+                </label>
+              </li>
+            </ol>
+            <br/>
+            <button type='submit' id='add-to-cart' class='btn btn--secondary'>Add to Cart !</button>
+          </fieldset>
+        </form>
+      </div>
+
       <footer class="cart__footer">
         <div class="grid">
           {% if section.settings.cart_notes_enable %}
@@ -123,7 +173,6 @@
     </div>
   {% endif %}
 </div>
-
 {% schema %}
   {
     "name": "Cart page",
