@@ -44,7 +44,7 @@
          $(document).on('keyup', '[data-variant-price-id]', function(e) {
            delay(function(){
             $.ajax({
-              url: 'https://89c944b6.ngrok.io/get-variant.json',
+              url: '/get-variant.json',
               data: { 'amount': e.target.value, 'shop': 'nanowrimo-store.myshopify.com' },
               success: function(data) {
                 $('#price').data('variant-price-id', data.variant_id)
