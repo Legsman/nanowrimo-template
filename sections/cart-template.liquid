@@ -84,7 +84,7 @@
 
       <div id="donation"></div>
 
-      <div id="donation-form" class="white-popup white-popup-block mfp-hide">
+      <div id="donation-form" class="white-popup mfp-hide">
         <form>
           <h1>Add a donation to your cart</h1>
           <fieldset style="border:0;">
@@ -178,6 +178,17 @@
     </div>
   {% endif %}
 </div>
+
+<style>
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+</style>
 {% schema %}
   {
     "name": "Cart page",
