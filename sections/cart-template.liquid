@@ -38,35 +38,6 @@
                   </div>
                 {% endunless %}
 
-                {% comment %}
-                  Optional, loop through custom product line items if available
-
-                  Line item properties come in as having two parts. The first part will be passed with the default form,
-                  but p.last is the actual custom property and may be blank. If it is, don't show it.
-
-                  For more info on line item properties, visit:
-                    - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
-                {% endcomment %}
-                {%- assign property_size = item.properties | size -%}
-                {% if property_size > 0 %}
-                  <div class="cart__meta-text">
-                    {% for p in item.properties %}
-                      {% unless p.last == blank or p.first == "subscription_id" or p.first == "shipping_interval_frequency" or p.first == "shipping_interval_unit_type" %}
-                        {{ p.first }}:
-
-                        {% comment %}
-                          Check if there was an uploaded file associated
-                        {% endcomment %}
-                        {% if p.last contains '/uploads/' %}
-                          <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                        {% else %}
-                          {{ p.last }}
-                        {% endif %}
-                      {% endunless %}
-                    {% endfor %}
-                  </div>
-                {% endif %}
-
                 <p class="small--hide">
                   <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="btn btn--small btn--secondary cart__remove">{{ 'cart.general.remove' | t }}</a>
                 </p>
@@ -111,6 +82,61 @@
         </tbody>
       </table>
 
+      <div id="donation"></div>
+
+      <div id="donation-form" class="white-popup mfp-hide">
+        <form>
+          <h1>Add a donation to your cart</h1>
+          <fieldset style="border:0;">
+            <ol>
+              <li>
+                <label for="price">Price you'd like to pay</label>
+                <input required class="required" id="price" type="number" value="" class="product-form__input" min="2" name="properties[price]" data-variant-price-id="">
+              </li>
+              <br />
+              <li>
+                <label for="donor-goodies">
+                  <input type="hidden" name="properties[accept-donnor_goodies]" value="No">
+                  <input id="donor-goodies" type="checkbox" name="properties[accept-donnor_goodies]" value="Yes">
+                  Would you like to receive free donor goodies ? (Optional)
+                </label>
+              </li>
+              <br />
+             <li>
+                <label>Which site you'd like to donate to</label>
+                <select id="event-type" name="properties[event-type]">
+                  <option value="nanowrimo">NaNoWriMo</option>
+                  <option value="camp-nanowrimo">Camp NaNoWriMo</option>
+                </select>
+              </li>
+              <br />
+             <li>
+                <div class="ui-widget">
+                  <label for="username">Choose a NaNoWriMo username</label>
+                  <input id="uid" type="hidden" name="properties[uid]">
+                  <input id="username" type="text" class="product-form__input" name="properties[username]" data-check-username="">
+                </div>
+              </li>
+              <br />
+              <li>
+                <label for="url">URL to display with your username on NaNoWriMo website (Optional)</label>
+                <input id="url" type="text" class="product-form__input" name="properties[url]">
+              </li>
+              <br />
+              <li>
+                <label for="recurring-charge">
+                    <input type="hidden" name="properties[recurring-charge]" class="product-form__input" value="No">
+                    <input id="recurring-charge" type="checkbox" name="properties[recurring-charge]" value="Yes">
+                    Make this order recurrent (Optional)
+                </label>
+              </li>
+            </ol>
+            <br/>
+            <button type='submit' id='add-to-cart' class='btn btn--secondary'>Add to Cart !</button>
+          </fieldset>
+        </form>
+      </div>
+
       <footer class="cart__footer">
         <div class="grid">
           {% if section.settings.cart_notes_enable %}
@@ -153,6 +179,16 @@
   {% endif %}
 </div>
 
+<style>
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+</style>
 {% schema %}
   {
     "name": "Cart page",

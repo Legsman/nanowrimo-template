@@ -3,5 +3,6 @@
   The contents of the cart.liquid template can be found in /sections/cart-template.liquid
 {% endcomment %}
 
-{% section 'cart-template' %}
+{{ 'custom.js' | asset_url | script_tag }}
 
+{% section 'cart-template' %}

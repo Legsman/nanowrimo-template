@@ -2,7 +2,9 @@
   The contents of the product.liquid template can be found in /sections/product-template.liquid
 {% endcomment %}
 
-{% section 'product-customizable-template' %}
+{% section 'product-donation-template' %}
+
+{{ 'custom.js' | asset_url | script_tag }}
 
 <script>
   // Override default values of shop.strings for each template.
